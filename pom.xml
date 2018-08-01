@@ -20,52 +20,89 @@
 		<autoconfig.properties.file></autoconfig.properties.file>
 		<flying.shark.version>1.0.47</flying.shark.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!--日志相关-->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.5</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.7.5</version>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.17</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.4</version>
+			</dependency>
+
+			<!--JSON相关-->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>1.2.3</version>
+			</dependency>
+
+			<!--Mock相关-->
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>1.8.5</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.15.0-GA</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	
 	<dependencies>
+		<!--日志相关-->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.5</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.slf4j</groupId>
 		    <artifactId>slf4j-log4j12</artifactId>
-		    <version>1.7.5</version>
 		</dependency>
 		<dependency>
 		    <groupId>log4j</groupId>
 		    <artifactId>log4j</artifactId>
-		    <version>1.2.17</version>
 		</dependency>
-
 		<dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.4</version>
         </dependency>
+		<!--JSON相关-->
         <dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.3</version>
 		</dependency>
+		<!--Mock相关-->
 		<dependency> 
 		    <groupId>org.mockito</groupId> 
 		    <artifactId>mockito-all</artifactId> 
-		    <version>1.8.5</version> 
-		    <scope>test</scope> 
 		</dependency>
-	</dependencies>  
-	
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-			    <groupId>org.javassist</groupId>
-			    <artifactId>javassist</artifactId>
-			    <version>3.15.0-GA</version>
-			</dependency>
-				
-		</dependencies>
-	</dependencyManagement>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
 	
 	<build>
    		<sourceDirectory>src</sourceDirectory>
